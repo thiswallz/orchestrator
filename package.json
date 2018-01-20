@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo TESTS DISABLED vows --spec test/*.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/thiswallz/orchestrator/issues"
   },
-  "homepage": "https://github.com/thiswallz/orchestrator#readme"
+  "homepage": "https://github.com/thiswallz/orchestrator#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-things": "^0.2.0"
+  }
 }
