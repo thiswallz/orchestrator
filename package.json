@@ -1,8 +1,9 @@
 {
   "name": "queue-orchestrator",
   "version": "1.0.2",
-  "description": "",
+  "description": "A basic module for sequencing and executing tasks based in promises.",
   "main": "index.js",
+  "keywords": ["orchestra", "promises", "nodejs"],
   "scripts": {
     "test": "echo TESTS DISABLED vows --spec test/*.js"
   },
