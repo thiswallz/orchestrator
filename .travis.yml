@@ -1,14 +1,9 @@
 language: node_js
 node_js:
   - "0.10"
-  - "7.5"
-  - "6.9"
-  - "5.12"
-  - "4.7"
 install:
+  - npm install
   - npm install mocha -g
-before_script:
-  - mocha --version
 script: 
   - mocka tests
 
