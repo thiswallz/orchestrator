@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/thiswallz/orchestrator.svg?branch=master)](https://travis-ci.org/thiswallz/orchestrator)
 [![NPM version](https://img.shields.io/npm/v/queue-orchestrator.svg)](https://www.npmjs.com/package/queue-orchestrator)
 
 # Queue-orchestrator 
