@@ -1,9 +1,10 @@
 language: node_js
 node_js:
+    - "stable"
+node_js:
   - "0.10"
 install:
   - npm install
-  - npm install mocha -g
 script: 
-  - mocka tests
+  - npm test 
 

@@ -3,9 +3,13 @@
   "version": "1.0.3",
   "description": "A basic module for sequencing and executing tasks based in promises.",
   "main": "index.js",
-  "keywords": ["orchestra", "promises", "nodejs"],
+  "keywords": [
+    "orchestra",
+    "promises",
+    "nodejs"
+  ],
   "scripts": {
-    "test": "echo TESTS DISABLED vows --spec test/*.js"
+    "test": "node_modules/.bin/mocha tests"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "chai-things": "^0.2.0"
+    "chai-things": "^0.2.0",
+    "mocha": "^5.0.0"
   }
 }
