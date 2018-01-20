@@ -12,7 +12,7 @@ npm install queue-orchestrator --save
 ```
 
 ```js
-    const Orchestrator = require("../");
+    const Orchestrator = require("queue-orchestrator");
    
     const orchestrator = new Orchestrator();
     
@@ -23,8 +23,7 @@ npm install queue-orchestrator --save
         }); 
       }
     });
-    const res = await orchestrator.start();
-    console.log(res[0].result)
+    orchestrator.start().then(res=>console.log(res[0].result));
     //OK
 
 ```
@@ -32,8 +31,8 @@ npm install queue-orchestrator --save
 ## Using reverse 
 
 ```js
-    const Orchestrator = require("../");
-  
+    const Orchestrator = require("queue-orchestrator");
+    
     const orchestrator = new Orchestrator();
     
     orchestrator.add({
@@ -69,14 +68,15 @@ npm install queue-orchestrator --save
       }
     });
 
-    const res = await orchestrator.start();
-    
-    console.log(res[0].reversed===true);
-    //true
-    console.log(res[1].reversed===true);
-    //true
-    console.log(res[1].reverse);
-    //The 2d process has reversed
+    orchestrator.start().then(res=>{
+      console.log(res[0].reversed===true);
+      //true
+      console.log(res[1].reversed===true);
+      //true
+      console.log(res[1].reverse);
+      //The 2d process has reversed
+    });
+
 ```
 
 ## General Usage
