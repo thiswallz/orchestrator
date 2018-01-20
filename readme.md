@@ -1,3 +1,5 @@
+[![NPM version](https://img.shields.io/npm/v/queue-orchestrator.svg)](https://www.npmjs.com/package/queue-orchestrator)
+
 # Queue-orchestrator 
 
 A module for sequencing and executing tasks based in promises, this module can reverse tasks if someone has failed.
