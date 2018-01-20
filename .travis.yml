@@ -5,7 +5,10 @@ node_js:
   - "6.9"
   - "5.12"
   - "4.7"
-before_install:
-    - npm install mocha -g
-script: mocka tests
+install:
+  - npm install mocha -g
+before_script:
+  - mocha --version
+script: 
+  - mocka tests
 
