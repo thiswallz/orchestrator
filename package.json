@@ -1,0 +1,19 @@
+{
+  "name": "queue-orchestrator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiswallz/orchestrator.git"
+  },
+  "author": "Mauricio Joost Wolff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiswallz/orchestrator/issues"
+  },
+  "homepage": "https://github.com/thiswallz/orchestrator#readme"
+}
