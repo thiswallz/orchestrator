@@ -1,6 +1,6 @@
 {
   "name": "queue-orchestrator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A basic module for sequencing and executing tasks based in promises.",
   "main": "index.js",
   "keywords": [
