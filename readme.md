@@ -32,6 +32,71 @@ npm install queue-orchestrator --save
 
 ## Using reverse concept if a promise is rejected
 
+## Example 1
+
+```js
+const axios = require('axios'); 
+
+orchestrator.add({
+  reverse(){
+    return new Promise((resolve, reject) => {
+      resolve("The process has reversed");
+    }); 
+  },
+  run(){
+    return axios.get('https://jsonplaceholder.typicode.com/posts/1');
+  }
+});
+
+orchestrator.add({
+  reverse(){
+    return new Promise((resolve, reject) => {
+      resolve("The 2d process has reversed");
+    }); 
+  },
+  run(){
+    return axios.get('https://jsonplaceholder.typicode.com/posts/1');
+  }
+});
+
+orchestrator.add({
+  options: {
+    break: true
+  },
+  run(){
+    return Promise.reject('Rejected on purpose');
+  }
+})     
+
+orchestrator.start().then(res=>{
+  console.log(res[0].reverse);
+  //The process has reversed
+  
+  console.log(`${res[0].reversed} - ${res[1].reversed} - ${res[2].reversed}`);
+  //true - true - false
+
+  console.log(res[1].result.data);
+  /*
+   * Response : { userId: 1,
+   *   id: 1,
+   *   title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+   *   body: 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut qu
+   *   as totam\nnostrum rerum est autem sunt rem eveniet architecto' }
+   */
+
+  console.log(res[2]);
+  /*
+   * Response: { success: false,
+   * result: 'Rejected on purpose',
+   * pos: 2,
+   * reversed: false,
+   * reverse: 'There is not reverse function' }
+   */
+});
+
+```
+
+### Example 2
 ```js
     const Orchestrator = require("queue-orchestrator");
     
