@@ -35,7 +35,10 @@ npm install queue-orchestrator --save
 ## Example 1
 
 ```js
-const axios = require('axios'); 
+const Orchestrator = require("queue-orchestrator");
+const axios = require('axios');
+ 
+const orchestrator = new Orchestrator();
 
 orchestrator.add({
   reverse(){
