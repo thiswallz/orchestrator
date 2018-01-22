@@ -7,11 +7,13 @@ A basic and simple module for sequencing and executing tasks based in promises, 
 
 You can chain and execute special promises if something is wrong, also if you set "break:true" the chain stops and start to execute the reverse functions backward.
 
-## Node.js Usage
+## Npm Install
 
 ```sh
 npm install queue-orchestrator --save
 ```
+
+## Javascript Usage
 
 ```js
     const Orchestrator = require("queue-orchestrator");
