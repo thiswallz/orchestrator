@@ -3,8 +3,9 @@
 
 # Queue-orchestrator 
 
-A module for sequencing and executing tasks based in promises, this module can reverse tasks if someone has failed.
+A basic and simple module for sequencing and executing tasks based in promises, this module can reverse tasks if something has failed.
 
+You can chain promises and execute special promises if something is wrong, also if you put "break:true" the chain stops and start to execute the reverse functions backward
 
 ## Node.js Usage
 
