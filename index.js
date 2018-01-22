@@ -40,7 +40,7 @@ class Orchestrator {
       }catch(e){
         res.push({
           pos,
-          revered: false,
+          reversed: false,
           reverse: e
         });
       }

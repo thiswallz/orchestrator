@@ -83,14 +83,14 @@ npm install queue-orchestrator --save
 
 ### Options
 
-General features.
+General Orchestrator features.
 
-| F(X)          |  Param          | Return  | Detail  |
+| F(X)          |  Params          | Return  | Detail  |
 |---------------|-----------------|---------|---------|
 | start      |  | promise  | This method starts to chain javascript promises|
 | add      | option object | void  | This method add a promise|
 
-Add method options.
+Add() method options.
 
 | Properties              | Type    | Detail  |
 |-------------------------|---------|---------|
