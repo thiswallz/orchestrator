@@ -5,7 +5,7 @@
 
 A basic and simple module for sequencing and executing tasks based in promises, this module can reverse tasks if something has failed.
 
-You can chain promises and execute special promises if something is wrong, also if you put "break:true" the chain stops and start to execute the reverse functions backward
+You can chain and execute special promises if something is wrong, also if you set "break:true" the chain stops and start to execute the reverse functions backward.
 
 ## Node.js Usage
 
@@ -30,7 +30,7 @@ npm install queue-orchestrator --save
 
 ```
 
-## Using reverse 
+## Using reverse concept if a promise is rejected
 
 ```js
     const Orchestrator = require("queue-orchestrator");
@@ -80,6 +80,24 @@ npm install queue-orchestrator --save
     });
 
 ```
+
+### Options
+
+General features.
+
+| F(X)          |  Param          | Return  | Detail  |
+|---------------|-----------------|---------|---------|
+| start      |  | promise  | This method starts to chain javascript promises|
+| add      | option object | void  | This method add a promise|
+
+Add method options.
+
+| Properties              | Type    | Detail  |
+|-------------------------|---------|---------|
+| options: {break: true}| boolean |  When the promise failed it will start to execute reversing promises backward if break is true|
+| run                   | function | Main method, you have to return a promise here|
+| reverse                   | function | Revere method, you have to return a promise here|
+
 
 ## General Usage
 
